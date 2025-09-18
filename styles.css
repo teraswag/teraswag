@@ -1,257 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap");
+:root {
+  --accent: #0f0;
+  --grad: #010;
+}
 * {
-  box-sizing: border-box;
   margin: 0;
-  color: #ffffff;
   padding: 0;
-  font-family: "Courier New", Courier, monospace;
-  cursor: crosshair;
-  transition: 0.5s;
+  box-sizing: border-box;
+  font-family: "Geist Mono", monospace;
+  color: var(--accent);
 }
 body {
-  background: #121212;
+  background: radial-gradient(circle, #000 67%, var(--grad) 100%);
 }
-.wrapper {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-.widget {
-  background: #212121;
-  height: 15vh;
-  border-radius: 5px;
-  border: 0.5px solid #555;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.5s;
-  text-align: center;
-}
-.widget:hover {
-  border: 0.5px solid #fff;
-}
-.container {
-  width: 75vw;
-  height: 75vh;
-}
-.grid-section {
-  width: 100%;
-  height: 100%;
-}
-.grid {
-  width: 100%;
-  display: grid;
-  grid-auto-flow: dense;
-  grid-template:
-    "1fr 1fr 1fr 1fr" 15vh
-    "1fr 1fr 1fr 1fr" 15vh
-    "1fr 1fr 1fr 1fr" 15vh;
-  grid-gap: 2vh;
-}
-.user {
-  grid-column: span 4;
-}
-.bigname {
-  font-size: 7.5vh;
-  margin-left: 2vw;
-  margin-right: 1vw;
-  background-image: linear-gradient(
-    to left,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    purple
-  );
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: rainbow 5s ease-in-out infinite;
-}
-.nexttoname {
-  display: flex;
-  align-items: baseline;
-  height: 7.5vh;
-  flex-direction: column;
-  text-align: left;
-  justify-content: center;
-  font-size: 2vh;
-}
-.name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.end {
-  margin-right: 2vw;
-}
-.brand-icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: fit-content;
-  height: 5vh;
-  width: 5vh;
-  filter: grayscale(100%);
-  transition: 0.2s ease-in-out;
-}
-
-.brand-icon:hover {
-  filter: grayscale(0%);
-}
-.yt {
-  width: 5vh;
-  height: 4.5vh;
-}
-@keyframes rainbow {
-  0% {
-    background-image: linear-gradient(
-      to left,
-      red,
-      orange,
-      yellow,
-      green,
-      blue,
-      purple
-    );
-  }
-  20% {
-    background-image: linear-gradient(
-      to left,
-      purple,
-      red,
-      orange,
-      yellow,
-      green,
-      blue
-    );
-  }
-  30% {
-    background-image: linear-gradient(
-      to left,
-      blue,
-      purple,
-      red,
-      orange,
-      yellow,
-      green
-    );
-  }
-  40% {
-    background-image: linear-gradient(
-      to left,
-
-      green,
-      blue,
-      purple,
-      red,
-      orange,
-      yellow
-    );
-  }
-  50% {
-    background-image: linear-gradient(
-      to left,
-      yellow,
-      green,
-      blue,
-      purple,
-      red,
-      orange
-    );
-  }
-  60% {
-    background-image: linear-gradient(
-      to left,
-      orange,
-      yellow,
-      green,
-      blue,
-      purple,
-      red
-    );
-  }
-}
-.widget:not(.user) {
-  justify-content: center;
   flex-direction: column;
 }
-.age {
-  font-size: 7.5vh;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes massive {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(2);
-  }
-}
-.cl {
-  background: orange;
-  height: 2vh;
-  width: 80%;
-}
-.cltxt,
-.pftxt,
-.pytxt,
-.untxt {
-  font-style: italic;
+ul {
+  list-style-type: "> ";
 }
 a {
   text-decoration: none;
 }
-.pf {
-  background: url(poafa.png);
+li span a:hover {
+  background: var(--accent);
+  color: #000;
 }
-.py {
-  background: url(py.png);
+.coloursdude {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 1.5vh;
+  gap: 1.5vh;
+  margin-top: 1.5vh;
 }
-.un {
-  background: url(un.png);
+.coloursdude div {
+  width: 1.5vh;
+  height: 1.5vh;
+  cursor: pointer;
 }
-.pf,
-.py,
-.un {
-  height: 10vh;
-  width: 10vh;
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
+.coloursdude div:hover {
+  background: #fff;
 }
-.mcskin {
-  grid-row: span 3;
-  height: 49vh;
+.ge:hover {
+  border: 0.1vh solid #0f0;
 }
-.mcskin img {
-  margin-top: 2vh;
-  height: 40vh;
-  filter: drop-shadow(0.2vw 0 0 orange) drop-shadow(0 0.2vw 0 orange)
-    drop-shadow(-0.2vw 0 0 orange) drop-shadow(0 -0.2vw 0 orange);
+.pn:hover {
+  border: 0.1vh solid #f0f;
 }
-.langs .progress {
-  border-radius: 7px;
-  -webkit-appearance: none;
+.or:hover {
+  border: 0.1vh solid #ff5b00;
 }
-progress[value]::-webkit-progress-bar,
-progress[value]::-moz-progress-bar {
-  background-color: orange;
+.wh:hover {
+  border: 0.1vh solid #fff;
 }
-.langwidg {
-  grid-row: span 2;
-  height: 32vh;
+.rd:hover {
+  border: 0.1vh solid #f00;
 }
-.btmright {
-  grid-column: span 2;
+.bl:hover {
+  border: 0.1vh solid #00f;
 }
-#clock {
-  font-size: 10vh;
+.ge {
+  background: #0f0;
+}
+.or {
+  background: #ff5b00;
+}
+.pn {
+  background: #f0f;
+}
+.wh {
+  background: #fff;
+}
+.rd {
+  background: #f00;
+}
+.bl {
+  background: #00f;
+}
+.active {
+  border: 0.1vh solid #fff;
 }

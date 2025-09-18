@@ -1,12 +1,50 @@
-if (
-  navigator.userAgent.match(
-    /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i
-  )
-) {
-  alert("This website is not intended for mobile devices! View on a computer!");
+var r = document.querySelector(":root");
+
+function orangeTheme() {
+  r.style.setProperty("--accent", "#FF5B00");
+  r.style.setProperty("--grad", "#0F0501");
+  document.querySelectorAll(".active").forEach((element) => {
+    element.classList.remove("active");
+  });
+  document.querySelector(".or").className += " active";
 }
-function showTime() {
-  const timeNow = new Date().toLocaleTimeString();
-  document.getElementById("clock").textContent = timeNow;
+function greenTheme() {
+  r.style.setProperty("--accent", "#0f0");
+  r.style.setProperty("--grad", "#010");
+  document.querySelectorAll(".active").forEach((element) => {
+    element.classList.remove("active");
+  });
+  document.querySelector(".ge").className += " active";
 }
-setInterval(showTime, 1000);
+function pinkTheme() {
+  r.style.setProperty("--accent", "#f0f");
+  r.style.setProperty("--grad", "#101");
+  document.querySelectorAll(".active").forEach((element) => {
+    element.classList.remove("active");
+  });
+  document.querySelector(".pn").className += " active";
+}
+function whiteTheme() {
+  r.style.setProperty("--accent", "#fff");
+  r.style.setProperty("--grad", "#111");
+  document.querySelectorAll(".active").forEach((element) => {
+    element.classList.remove("active");
+  });
+  document.querySelector(".wh").className += " active";
+}
+function redTheme() {
+  r.style.setProperty("--accent", "#f00");
+  r.style.setProperty("--grad", "#100");
+  document.querySelectorAll(".active").forEach((element) => {
+    element.classList.remove("active");
+  });
+  document.querySelector(".rd").className += " active";
+}
+function blueTheme() {
+  r.style.setProperty("--accent", "#00f");
+  r.style.setProperty("--grad", "#001");
+  document.querySelectorAll(".active").forEach((element) => {
+    element.classList.remove("active");
+  });
+  document.querySelector(".bl").className += " active";
+}
